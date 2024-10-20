@@ -16,13 +16,13 @@ namespace Redpenguin.ScenesManagement
         [ContextMenu("LoadTestScene")]
         private async void LoadTestScene()
         {
-            await _sceneLoader.LoadScene("TestScene").ContinueWith(() => Debug.Log("Scene loaded"));
+            await _sceneLoader.LoadSceneAsync("TestScene").ContinueWith(() => Debug.Log("Scene loaded"));
         }
         
         [ContextMenu("LoadTestScene1")]
         private async void LoadTestScene1()
         {
-            await _sceneLoader.LoadScene("TestScene1");
+            await _sceneLoader.LoadSceneAsync("TestScene1");
         }
     }
 }

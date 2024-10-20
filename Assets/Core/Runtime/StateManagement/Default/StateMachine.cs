@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Redpenguin.StateManagement.Default
 {
@@ -26,12 +27,14 @@ namespace Redpenguin.StateManagement.Default
         public void Enter(Type type)
         {
             var state = ChangeState(type);
+            Debug.Log($"Enter {type.Name}");
             ((IState) state).Enter();
         }
 
         public void Enter<TState, TPayload>(TPayload payload) where TState : class, IPayloadedState<TPayload>
         {
             var state = ChangeState(typeof(TState));
+            Debug.Log($"Enter {typeof(TState).Name}");
             ((TState)state).Enter(payload);
         }
 
