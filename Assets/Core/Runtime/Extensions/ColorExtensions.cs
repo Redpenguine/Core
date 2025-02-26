@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Redpenguin.Utils
+namespace Redpenguin.Core.Extensions
 {
     public static class ColorExtensions
     {
